@@ -1,0 +1,64 @@
+/* Image Downloader Extension Styles */
+
+.image-download-wrapper {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.image-download-icon {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 10000 !important;
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+    pointer-events: auto !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.image-download-icon:hover {
+    background: rgba(0, 0, 0, 0.9) !important;
+    transform: scale(1.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+.image-download-wrapper:hover .image-download-icon {
+    opacity: 1 !important;
+}
+
+/* Ensure images maintain their original styling */
+.image-download-wrapper img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Hide download icons on very small images */
+.image-download-wrapper img[width][height] {
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.image-download-wrapper img[width][height]:not([width*="5"][height*="5"]) .image-download-icon {
+    display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-download-icon {
+        width: 28px !important;
+        height: 28px !important;
+        top: 6px !important;
+        right: 6px !important;
+    }
+} 

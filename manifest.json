@@ -1,0 +1,35 @@
+{
+    "name": "Image Downloader Extension",
+    "author": "Charles Patterson",
+    "description": "Annotates images on web pages with download icons that appear on hover",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["background_scripts/background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_scripts/content-script.js"],
+            "css": ["content_scripts/content-styles.css"]
+        }
+    ],
+    "homepage_url": "https://github.com/CharlesPatterson/ImageDownloaderExtension",
+    "icons": {
+        "32": "icons/download-32.svg",
+        "48": "icons/download-48.svg"
+    },
+    "action": {
+        "default_popup": "popup/image_downloader.html",
+        "default_icon": {
+            "32": "icons/download-32.svg",
+            "48": "icons/download-48.svg"
+        },
+        "default_title": "Image Downloader Extension"
+    }
+}

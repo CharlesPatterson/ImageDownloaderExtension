@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="image_downloader.css" />
+  </head>
+
+  <body>
+    <div id="popup-content">
+      <h3>Image Downloader Extension</h3>
+      <p>Hover over any image on this page to see a download icon.</p>
+      <p>Click the icon to download the image.</p>
+      
+      <div class="toggle-container">
+        <label class="toggle-label">
+          <input type="checkbox" id="extension-toggle" checked>
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-text">Enable extension</span>
+      </div>
+      
+      <div class="status">
+        <span id="status-text">Extension is active</span>
+      </div>
+      
+      <div class="info">
+        <p><strong>Current page:</strong> <span id="current-url">Loading...</span></p>
+      </div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't activate image download on this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="image_downloader.js"></script>
+  </body>
+</html>
